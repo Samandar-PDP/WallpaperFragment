@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.wallpaperapp.databinding.ImageLayoutBinding
 
 class ImageAdapter : ListAdapter<Int, ImageAdapter.ImageViewHolder>(DiffCallBack()) {
+
     lateinit var onClick: (image: Int) -> Unit
     private class DiffCallBack : DiffUtil.ItemCallback<Int>() {
         override fun areItemsTheSame(oldItem: Int, newItem: Int): Boolean {
